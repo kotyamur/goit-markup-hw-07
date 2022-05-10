@@ -810,7 +810,7 @@ address {
 
 /* варіант з background-image */
 
-/* .modal-checkbox:checked + .modal-policy-icon {
+/* .modal__checkbox:checked + .modal__policy-icon {
     border-color: transparent;
     background-image: url(../images/modal-check.svg);
     background-repeat: no-repeat;
