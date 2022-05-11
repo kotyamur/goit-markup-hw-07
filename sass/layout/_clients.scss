@@ -1,0 +1,27 @@
+.clients__title {
+    margin-bottom: 50px;
+}
+
+.clients__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--theme-clients-border);
+    border-radius: 4px;
+    color: var(--theme-clients);
+
+    transition: border-color var(--typical-transition-duration) var(--typical-transition-timing-function),
+    color var(--typical-transition-duration) var(--typical-transition-timing-function);
+}
+
+.clients__link:hover,
+.clients__link:focus {
+    border-color: var(--theme-hover);
+    color: var(--theme-hover);
+}
+
+.clients__icon {
+    fill: currentColor;
+}

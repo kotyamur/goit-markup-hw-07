@@ -82,7 +82,6 @@ address {
     height: 50px;
     border: 0;
     border-radius: 4px;
-    /* padding: 10px 32px; */
 
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
@@ -96,6 +95,11 @@ address {
     transition: background-color var(--typical-transition-duration) var(--typical-transition-timing-function);
 }
 
+.btn:hover,
+.btn:focus {
+    background-color: var(--theme-bg-bt-hover);
+}
+
 .logo {
     color: var(--theme-hover);
     text-decoration: none;
@@ -107,23 +111,18 @@ address {
 
 .logo--dark {
     color: var(--theme-logo);
-    
 }
 
 .logo--light {
     color: var(--theme-accent);
 }
 
-.second-title {
+.section-title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
     color: var(--theme-heading);
-}
-
-.section-title {
-    margin-bottom: 50px;
 }
 
 .section-list {
@@ -281,10 +280,6 @@ address {
     color: var(--theme-accent);
 }
 
-.call__btn:hover,
-.call__btn:focus {
-    background-color: var(--theme-bg-bt-hover);
-}
 
 /* ---------------------features--------------------- */
 .features {
@@ -324,6 +319,10 @@ address {
 
 /* ---------------------occupation--------------------- */
 
+.occupation__title {
+    margin-bottom: 50px;
+}
+
 .occupation__item {
     position: relative;
     width: 370px;
@@ -351,6 +350,10 @@ address {
 .team {
     margin: 0 auto;
     background-color: var(--theme-bg-btn);
+}
+
+.team__title {
+    margin-bottom: 50px;
 }
 
 .team__item {
@@ -384,6 +387,10 @@ address {
 
 
 /* ---------------------clients--------------------- */
+
+.clients__title {
+    margin-bottom: 50px;
+}
 
 .clients__link {
     display: flex;
@@ -501,11 +508,6 @@ address {
     align-items: center;
     justify-content: center;
     margin-left: 12px;
-}
-
-.footer__btn:hover,
-.footer__btn:focus {
-    background-color: var(--theme-bg-bt-hover);
 }
 
 .footer__send-icons {
@@ -845,7 +847,3 @@ address {
     margin: auto;
 }
 
-.modal__btn:hover,
-.modal__btn:focus {
-    background-color: var(--theme-bg-bt-hover);
-}
