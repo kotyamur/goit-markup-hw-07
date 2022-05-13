@@ -16,9 +16,57 @@
 
     transform: translate(-50%, -50%) scale(1);
     transition: transform var(--typical-transition-duration) var(--typical-transition-timing-function);
+
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(0.7);
+    }
+
+    &__title {
+        margin-bottom: 12px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.15;
+        text-align: center;
+        color: var(--theme-heading);
+    }
+
+    &__form {
+        margin-bottom: 30px;
+    }
+
+    &__label {
+        display: inline-block;
+        margin-bottom: 4px;
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+        color: var(--theme-main);
+    }
+
+    &__input-wrap {
+        position: relative;
+    }
+
+    &__checkbox-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        line-height: 1.71;
+        text-align: center;
+    }
+
+    &__policy-link {
+        color: var(--theme-hover);
+    }
+
+    &__btn {
+        display: block;
+        margin: auto;
+    }
 }
 
-.close-icon {
+.modal__close-icon {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -33,45 +81,21 @@
     outline: none;
     cursor: pointer;
     fill: #000000;
+
+    &:hover,
+    &:focus {
+        fill: #2196F3;
+    }
 }
 
-.close-icon:hover,
-.close-icon:focus {
-    fill: #2196F3;
-}
-
-.modal__title {
-    margin-bottom: 12px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
-    color: var(--theme-heading);
-}
-
-.modal__form {
-    margin-bottom: 30px;
-}
-
-.modal__field:not(:last-child) {
+.modal__field {
+    &:not(:last-child) {
     margin-bottom: 10px;
-}
+    }
 
-.modal__field.modal__coments{
-    margin-bottom: 20px;
-}
-
-.modal__label {
-    display: inline-block;
-    margin-bottom: 4px;
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-    color: var();
-}
-
-.modal__input-wrap {
-    position: relative;
+    &.modal__coments{
+        margin-bottom: 20px;
+    }
 }
 
 .modal__input {
@@ -84,10 +108,10 @@
     outline: none;
 
     transition: border-color var(--typical-transition-duration) var(--typical-transition-timing-function);
-}
 
-.modal__field:focus-within .modal__input {
-    border-color: var(--theme-hover);
+    .modal__field:focus-within & {
+        border-color: var(--theme-hover);
+    }
 }
 
 .modal__icon {
@@ -98,10 +122,10 @@
     fill: #212121;
 
     transition: fill var(--typical-transition-duration) var(--typical-transition-timing-function);
-}
 
-.modal__field:focus-within .modal__icon {
-    fill: var(--theme-hover);
+    .modal__field:focus-within & {
+        fill: var(--theme-hover);
+    }
 }
 
 .modal__textarea {
@@ -115,26 +139,17 @@
     outline: none;
 
     transition: border-color var(--typical-transition-duration) var(--typical-transition-timing-function);
-}
 
-.modal__textarea::placeholder {
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
-}
+    &::placeholder {
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
 
-.modal__field:focus-within > .modal__textarea {
-    border-color: var(--theme-hover);
-}
-
-.modal__checkbox-label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    line-height: 1.71;
-    text-align: center;
+    .modal__field:focus-within & {
+        border-color: var(--theme-hover);
+    }
 }
 
 .modal__policy-icon {
@@ -146,6 +161,11 @@
     height: 15px;
     border: 2px solid #212121;
     border-radius: 2px;
+
+    .modal__checkbox:checked + &{
+        border: transparent;
+        background-color: #2196F3;
+    }
 }
 
 /* варіант з background-image */
@@ -167,20 +187,6 @@
     opacity: 0;
 }
 
-.modal__checkbox:checked + .modal__policy-icon {
-    border: transparent;
-    background-color: #2196F3;
-}
-
 .modal__checkbox:checked + .modal__policy-icon > .modal__checkbox-icon {
     opacity: 1;
-}
-
-.modal__policy-link {
-    color: var(--theme-hover);
-}
-
-.modal__btn {
-    display: block;
-    margin: auto;
 }

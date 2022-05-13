@@ -5,12 +5,11 @@
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-}
 
-.logo--dark {
-    color: var(--theme-logo);
-}
-
-.logo--light {
-    color: var(--theme-accent);
+    &--dark {
+        color: var(--theme-logo);
+    }
+    &--light {
+        color: var(--theme-accent);
+    }
 }

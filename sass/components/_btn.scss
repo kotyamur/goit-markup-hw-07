@@ -14,9 +14,9 @@
     background-color: var(--theme-hover);
 
     transition: background-color var(--typical-transition-duration) var(--typical-transition-timing-function);
-}
-
-.btn:hover,
-.btn:focus {
-    background-color: var(--theme-bg-bt-hover);
+    
+    &:hover,
+    &:focus {
+        background-color: var(--theme-bg-bt-hover);
+    }
 }

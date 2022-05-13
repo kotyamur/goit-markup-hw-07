@@ -14,15 +14,15 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
 
-.call__title {
-    margin-bottom: 30px;
-
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--theme-accent);
+    &__title {
+        margin-bottom: 30px;
+    
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--theme-accent);
+    }
 }

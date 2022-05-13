@@ -1,5 +1,11 @@
-.clients__title {
-    margin-bottom: 50px;
+.clients {
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__icon {
+        fill: currentColor;
+    }
 }
 
 .clients__link {
@@ -14,14 +20,11 @@
 
     transition: border-color var(--typical-transition-duration) var(--typical-transition-timing-function),
     color var(--typical-transition-duration) var(--typical-transition-timing-function);
+
+    &:hover,
+    &:focus {
+        border-color: var(--theme-hover);
+        color: var(--theme-hover);
+    }
 }
 
-.clients__link:hover,
-.clients__link:focus {
-    border-color: var(--theme-hover);
-    color: var(--theme-hover);
-}
-
-.clients__icon {
-    fill: currentColor;
-}
